@@ -1,0 +1,7 @@
+##### algoritmo 1 #####
+contadora=0
+for c in range(0,5000000,49):
+    if c%2==0 and c%37==0:
+        contadora = contadora +1
+        
+print(contadora)
