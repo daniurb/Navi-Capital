@@ -1,0 +1,33 @@
+### Definindo o dicionário ###
+notas_alunos = { 'Aluno 1':'','Aluno 2':'','Aluno 3':'','Aluno 4':'','Aluno 5':''}
+
+### Montando o dicionário ###
+for c in range (0,5):
+    if c==0:
+        a = float(input("Digite a nota do primeiro aluno: "))
+        notas_alunos['Aluno 1'] = a
+    if c==1:
+        a = float(input("Digite a nota do segundo aluno: "))
+        notas_alunos['Aluno 2'] = a
+    if c==2:
+        a = float(input("Digite a nota do terceiro aluno: "))
+        notas_alunos['Aluno 3'] = a
+    if c==3:
+        a = float(input("Digite a nota do quarto aluno: "))
+        notas_alunos['Aluno 4'] = a
+    if c==4:
+        a = float(input("Digite a nota do quinto aluno: "))
+        notas_alunos['Aluno 5'] = a
+  
+### Determinando qual aluno obteve a maior nota ###
+
+nota_maxima = max(notas_alunos.values())    ## Obtendo a maior nota ##
+alunos_de_maior_nota = [k for k, v in notas_alunos.items() if v == nota_maxima]     ## Determinando os alunos de maior nota, cria uma lista com estes alunos.##
+
+if len(alunos_de_maior_nota)== 1: ## Caso a maior nota pertença a um único aluno, o comprimento da lista alunos_de_maior_nota é 1.  
+    print(alunos_de_maior_nota[0],":",nota_maxima)
+    
+else:                          ## Do contrário, devemos mostrar os alunos de maior nota 
+    print(40*"-")
+    for c in range(0,len(alunos_de_maior_nota)):
+        print(alunos_de_maior_nota[c],":",nota_maxima)
