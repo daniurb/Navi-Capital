@@ -1,0 +1,36 @@
+####### Exercicio 2 #######
+
+####### Bibliotecas #######
+import math
+
+####### Montando o vetor #######
+x = []
+for i in range(0,10):
+    if i%2==0:
+        a = 3**(i)+ 7*math.factorial(i)
+        x.append(a)
+    else:
+        a = 2**(i)+ 4*math.log(i)
+        x.append(a)
+        
+####### Calculando a média #######
+soma=0
+for d in range(0,10):
+    soma = soma + x[d]
+media = soma/len(x)
+print('A média é : {:.2f}'.format(media))
+
+####### Selecionando o maior valor #######
+var_auxiliar = 0
+maior_valor = 0
+for item in x:
+    
+    if var_auxiliar == 0:
+        item = maior_valor
+        var_auxiliar=var_auxiliar+1
+        
+    else:
+        if item > maior_valor:
+            maior_valor=item
+            
+print("O maior valor é:", maior_valor)
